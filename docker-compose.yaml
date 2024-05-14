@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  segment_service:
+    container_name: segmentation
+    build: .
+    ports:
+      - "5001:5001"

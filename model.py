@@ -26,7 +26,7 @@ class UpdatedMeanIoU(MeanIoU):
 
 # INITIAL MODEL
 def init_model():
-    segment_model = tf.keras.models.load_model('.model/model_segmentation_latest.keras')
+    segment_model = tf.keras.models.load_model('model/latest_version.keras')
     segment_model.summary()
     global app_model
     app_model = segment_model

@@ -97,9 +97,9 @@ def read_image_from_url(url):
         if response.status_code == 200:
             # Đọc dữ liệu hình ảnh từ response
             image_data = response.content
-            # Tạo đối tượng hình ảnh từ dữ liệu nhận được
+            # # Tạo đối tượng hình ảnh từ dữ liệu nhận được
             img = Image.open(io.BytesIO(image_data))
-            # Lưu hình ảnh xuống thư mục với tên cụ thể
+            # # Lưu hình ảnh xuống thư mục với tên cụ thể
             img.save(constants.SAVE_PATH)
 
         return 'SUCCESS'

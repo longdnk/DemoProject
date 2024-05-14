@@ -1,3 +1,5 @@
+import time
+
 from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 
@@ -51,6 +53,7 @@ def resolve_request():
         return render_template('home.html', filenames=file_names)
     else:
         download_status = helper.read_image_from_url(request.form.get('url'))
+        time.sleep(1)
         if download_status == 'SUCCESS':
             helper.predict_image(constants.SAVE_PATH)
         return render_template('home.html', download_status=download_status)
@@ -63,4 +66,4 @@ def display_image(filename):
 
 if __name__ == "__main__":
     # CUSTOM HOST IP HERE
-    app.run(host="0.0.0.0", debug=True, port=5000, threaded=True)
+    app.run(host="0.0.0.0", debug=True, port=5001, threaded=True)

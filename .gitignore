@@ -1,5 +1,6 @@
 static/uploads
 .idea
 __pycache__
+model
 .model
 .DS_Store
