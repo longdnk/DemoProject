@@ -3,6 +3,8 @@ version: '3'
 services:
   segment_service:
     container_name: segmentation
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile.macos
     ports:
       - "5001:5001"
